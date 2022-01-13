@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emp:schema xmlns:emp="http://www.w3.org/2001/XMLSchema">
+
+<emp:element name="Company">
+<emp:complexType>
+<emp:sequence>
+<emp:element name="Employee" maxOccurs="unbounded">
+	<emp:complexType>
+	<emp:sequence>
+	<emp:element name="Emp_id" type="emp:string"></emp:element>
+	<emp:element name="Emp_name" type="emp:string"></emp:element>
+	<emp:element name="Emp_age" type="emp:integer"></emp:element>
+	<emp:element name="Emp_salary" type="Salary"></emp:element>
+	<emp:element name="Emp_emailid" type="Email"></emp:element>
+	<emp:element name="Emp_Phonenum" type="Phone"></emp:element>
+	<emp:element name="Emp_designation" type="emp:string"></emp:element>
+	</emp:sequence>
+	</emp:complexType>
+</emp:element>
+</emp:sequence>
+</emp:complexType>
+
+<emp:unique name="EmpIdUniqueKey">
+        <emp:selector xpath="Employee" />
+        <emp:field xpath="@Emp_id" />
+</emp:unique>
+
+</emp:element>
+
+<emp:simpleType name="Salary">
+<emp:restriction base="emp:integer">
+<emp:minInclusive value="50000"></emp:minInclusive>
+<emp:maxInclusive value="200000"></emp:maxInclusive>
+</emp:restriction>
+</emp:simpleType>
+
+<emp:simpleType name="Phone">
+<emp:restriction base="emp:integer">
+<emp:pattern value="([0-9]{10})"></emp:pattern>
+</emp:restriction>
+</emp:simpleType>
+
+<emp:simpleType name="Email">
+<emp:restriction base="emp:string">
+<emp:pattern value="[^@]+@[^\.]+\..+"></emp:pattern>
+</emp:restriction>
+</emp:simpleType>
+
+
+</emp:schema>
+
+
