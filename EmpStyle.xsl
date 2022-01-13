@@ -41,10 +41,11 @@
 				<th>EMAIL</th>
 				<th>MobNum</th>
 				<th>Designation</th>
+				<th>Promotion</th>
 			</tr>
 			
 			<xsl:for-each select="Company/Employee">
-			
+			<xsl:sort select="Emp_id"></xsl:sort>
 			<tr>
 				<td>
 				<xsl:value-of select="@Emp_id"></xsl:value-of>
@@ -67,16 +68,17 @@
 				<td>
 				<xsl:value-of select="Emp_designation"></xsl:value-of>
 				</td>
+				<xsl:if test="Emp_age &gt;= 50">
+					<td>Associate Project Manager</td>
+				</xsl:if>
+				<xsl:if test="(Emp_age &gt;= 40) and (Emp_age &lt;= 49)">
+					<td>Team Leader</td>
+				</xsl:if>
+				<xsl:if test="Emp_age &lt; 40">
+					<td>Developer</td>
+				</xsl:if>
 				
-				<xsl:if test= "Emp_age >= 50">
-				<td>Associate Project Manager</td>
-				</xsl:if>
-				<xsl:if test="Emp_age > 41">
-				<td>Team Leader</td>
-				</xsl:if>
-				<xsl:if test="Emp_age < 40">
-				<td>Developer</td>
-				</xsl:if>
+				
 			</tr>
 			
 			</xsl:for-each>
