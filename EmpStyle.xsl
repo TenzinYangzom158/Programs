@@ -48,7 +48,7 @@
 			<xsl:sort select="Emp_id"></xsl:sort>
 			<tr>
 				<td>
-				<xsl:value-of select="@Emp_id"></xsl:value-of>
+				<xsl:value-of select="Emp_id"></xsl:value-of>
 				</td>
 				<td>
 				<xsl:value-of select="Emp_name"></xsl:value-of>

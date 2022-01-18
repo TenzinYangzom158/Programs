@@ -7,6 +7,7 @@
 <emp:element name="Employee" maxOccurs="unbounded">
 	<emp:complexType>
 	<emp:sequence>
+	<emp:element name="Emp_id" type="emp:integer"></emp:element>
 	<emp:element name="Emp_name" type="emp:string"></emp:element>
 	<emp:element name="Emp_age" type="emp:integer"></emp:element>
 	<emp:element name="Emp_salary" type="Salary"></emp:element>
