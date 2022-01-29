@@ -1,1 +1,142 @@
+<!DOCTYPE html>
 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Campus Visit</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="newform.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bc4d8abcd3.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  <body>
+    
+    <div class="container">
+      <form  onsubmit = "validateForm(event)"
+              class="form" 
+              id="form">
+        <h1>Campus Visit Feedback</h1>
+        <legend><span class="number">1</span> Basic information</legend>
+        <div class="form-control">
+          <!-- <label for="firstname">First Name</label> -->
+          <input
+            type="text"
+            id="firstname"
+            placeholder="Name"
+            onkeypress="return onlyChar (event)"
+            onkeyup=" checkName('firstname')"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+
+        <div class="form-control">
+          <input
+            type="text"
+            id="address"
+            placeholder="Address"
+            onkeyup=" checkAddress('address')"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+
+        <div class="form-control">
+          <!-- <label for="email">Email</label> -->
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="off"
+            onkeyup="checkEmail()"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+         <!-- <label for="password">Password</label> -->
+          <input
+            type="text"
+            id="password"
+            placeholder="Password"
+            onkeyup="checkPassword()"
+            autocomplete="off"
+          />
+
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="password2">Confirm Password</label> -->
+          <input
+            type="password"
+            id="password2"
+            placeholder="Confirm Password"
+            onkeyup="confirmPassword()"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+         <!--  <label for="phoneno">Phone No</label> -->
+          <input
+            type="text"
+            id="phoneno"
+            placeholder="Phone Number"
+            onkeypress="return onlyDigits (event)"
+            onkeyup="checkPhoneNo()"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+
+        <legend><span class="number">2</span> Your Feedback</legend>
+
+        <label>Things you liked about Christ University : </label> <br><br>
+        <div class = "cb">
+          <input type="checkbox" name="campus" value="campus">Campus<br>
+          <input type="checkbox" name="students" value="students">Students<br>
+          <input type="checkbox" name="location" value="location">Location<br>
+          <input type="checkbox" name="atmosphere" value="atmosphere">Atmosphere<br>
+          <input type="checkbox" name="dorm rooms" value="dorm rooms">Dorm rooms<br>
+          <input type="checkbox" name="sports" value="sports">Sports<br><br>
+        </div>
+        
+        How you became interested in Christ University : <br><br>
+        <div class = "rb">
+          <input type="radio" name="interested" value="friends" checked>Friends <br>
+          <input type="radio" name="interested" value="television">Television<br>
+          <input type="radio" name="interested" value="internet">Internet<br>
+          <input type="radio" name="interested" value="Other">Others<br><br>
+        </div>
+        <label>Comments : </label> <br><br>
+        <textarea id="bio" name="user_bio" placeholder="Please provide any additional comments or suggestions."></textarea><br><br>
+
+        <button type = 'submit'>Submit</button>
+        <button type="reset" value="Reset"> Reset </button>
+
+
+        
+      </form>
+
+    </div>
+  </body>
+  <script src="CampusFeedback.js"></script>
+</html>
