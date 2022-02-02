@@ -1,5 +1,5 @@
 {"package":[
-    {"id":1, "date":"01-02-2022", "duration":2,"price": 3000, "dept_city":"Bangalore", "dest_city":"Delhi"},
+     {"id":1,  "date": "September 19,2022", "duration":2,"price": 3000, "dept_city":"Bangalore", "dest_city":"Delhi"},
     {"id":2, "date":"12-01-2022", "duration":3,"price": 3500, "dept_city":"Mysore", "dest_city":"Mumbai"},
     {"id":3, "date":"22-01-2022", "duration":4,"price": 2500, "dept_city":"Bangalore", "dest_city":"Mysore"},
     {"id":4, "date":"13-02-2022", "duration":5,"price": 3500, "dept_city":"Delhi", "dest_city":"Mumbai"},
