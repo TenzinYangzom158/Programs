@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="registered.xsd" type="application/xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-stylesheet href="registered.xsl" type="xsl"?>
+<christ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:nostu-NamespaceSchemaLocation="registered.xsd">
+    <computer-science>
+        <stu-name>Tenzin</stu-name>
+        <stu-university>xyz University</stu-university>
+        <stu-phone>1234567898</stu-phone>
+        <stu-email>stu_a@university.in</stu-email>
+    </computer-science>
+    <computer-science>
+        <stu-name>Yangzom</stu-name>
+        <stu-university>CU University</stu-university>
+        <stu-phone>8903765656</stu-phone>
+        <stu-email>stu_b@university.in</stu-email>
+    </computer-science>
+    <computer-science>
+        <stu-name>Yeshi</stu-name>
+        <stu-university>SJ University</stu-university>
+        <stu-phone>7823453746</stu-phone>
+        <stu-email>stu_c@university.in</stu-email>
+    </computer-science>  
+</christ>
