@@ -32,10 +32,3 @@ app.filter("dayFilter", function()
 });
 
 
-app.filter('myNameFilter',function()
-{
-    return function(input)
-    {
-        return 'Dr. ' + input;
-    }
-})
